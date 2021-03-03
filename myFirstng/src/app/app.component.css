@@ -1,0 +1,17 @@
+.justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.pagination {
+    flex-wrap: wrap !important;
+}
+
+.form-control {
+    border: 1px solid #f5c6cb;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.40);
+    border-color: #f5c6cb;
+}

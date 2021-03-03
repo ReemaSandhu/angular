@@ -1,0 +1,78 @@
+<h1>ENTER DETAILS</h1>
+  <form class="container ab"  [formGroup]="myForm" (ngSubmit)="onSubmits()">
+    <div class="form-group" >
+      <label class="">NAME</label>
+      <input class="form-control name" name="name" type ="text" placeholder="name" formControlName="name"
+      [ngClass]="{'is-invalid':myForm.get('name').invalid && myForm.get('name').touched}" />
+      <div class="invalid-feedback" [ngClass]="{'is-invalid':myForm.get('name').invalid && myForm.get('name').touched}">
+         <div *ngIf="myForm.get('name').errors">Please Enter Name</div>
+        </div>
+      <!-- [(ngModel)]="person.name"  [ngModelOptions]="{standalone: true}"-->
+    </div>
+      <div class="form-group">
+          <label class="">EMAIL</label>
+          <input class="form-control email" type ="email" placeholder="email" formControlName="email"
+           [ngClass]="{'is-invalid':myForm.get('email').invalid && myForm.get('email').touched}" />
+          <div class="invalid-feedback" *ngIf="myForm.get('email').errors" >
+            <div *ngIf="myForm.get('email').errors.required">Please Enter Email</div>
+            <div *ngIf="myForm.get('email').errors.email">Please Enter Valid email</div>
+        </div>
+      </div> 
+      <div class="form-group">
+          <label class="">PASSWORD</label>
+          <input class="form-control password" type="password" placeholder="password"  formControlName="password" 
+          [ngClass]="{'is-invalid':myForm.get('password').invalid && myForm.get('password').touched}"/>
+          <div class="invalid-feedback"> Please Enter Password</div>
+      </div>
+    <div class="form-group"> 
+      <label class=""> CONFIRM PASSWORD</label>
+      <input class="form-control confirm" type="password" placeholder="confirm password" formControlName="confirm"
+      [ngClass]="{'is-invalid':myForm.get('confirm').invalid && myForm.get('confirm').touched}"/>
+      <div class="invalid-feedback"> Please Enter  password to Confirm</div>
+    </div>
+      <button class="btn btn-outline-primary mt-2 bm-2 submit" type="submit" > SUBMIT</button>
+  </form><br/>
+   <!-- [disabled]="myForm.invalid" -->
+    <!-- <button class="btn btn-outline-primary text-center" (click)="getData()"> get data</button> -->
+    <!-- <div class="container">
+      <form (ngSubmit)="onEdit()">
+      <div class="form-group">
+        <label>Edit name</label>
+        <input class="form-control" type="text" [ngModel]="edit.name" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label>Edit email</label>
+        <input class="form-control" type="email" [ngModel]="edit.email" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label>Edit password</label>
+        <input class="form-control" type="text" [ngModel]="edit.password" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label>Edit confirm password</label>
+        <input class="form-control" type="text" [ngModel]="edit.confirm" [ngModelOptions]="{standalone: true}">
+      </div>
+      <button class="btn btn-outline-primary" type="submit">Submit Edited data</button>
+    </form>
+    </div><br/> -->
+    <div class="container">
+        <div class=" row">
+             <div *ngFor ="let user of data" class="col-4"> 
+               <!-- <app-card [roll_no]="user.password" [name]="user.name" [age]="user.confirm" [branch]="user.email"></app-card>  -->
+               <div class="card">
+                <div class="card-header">{{user.name}}</div>
+                <div class="card-body">
+                    <h3> NAME : {{user.name}} </h3>
+                     <h4> PASSWORD: {{user.password}}</h4>
+                    <h4> confirmed Password: {{user.confirm}}</h4>
+                    <h4>EMAIL: {{user.email}}</h4>
+                    <button class="btn btn-outline-primary mt-2 mb-2" (click)="editData(user.name)">Edit</button>
+                    <button class="btn btn-outline-warning mt-2 mb-2" (click)="removeData(user.name)" >remove</button>
+
+                </div>
+              </div>
+            </div>
+            
+            
+        </div>
+    </div>

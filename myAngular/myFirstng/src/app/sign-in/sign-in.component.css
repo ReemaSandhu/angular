@@ -1,0 +1,36 @@
+.ab{
+	
+	display: block;
+	max-width: 50%;
+	margin-left: 25%;
+	
+}
+.btn-outline-primary{
+    background-color: green;
+    
+  
+  }
+.btn-outline-warning{
+    background-color: #575757;
+    
+  }
+  .btn-outline-warning:hover{
+    background-color: red;
+    color: #fff;
+  }
+  .btn{
+    transition:transform .2s;
+    border-radius: 15px;
+    color: #fff;
+  }
+  .btn:hover{
+    transform: scale(1.1);
+  }
+  h1{
+	text-align: center;
+	color: #fff;
+	margin-top: 4%;
+}
+label{
+	color: #fff;
+}

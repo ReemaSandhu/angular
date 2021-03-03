@@ -1,0 +1,104 @@
+
+.upper-div-row {
+    width:  100%;
+    margin-left: 0px ;
+    display: flex;
+}
+
+.upper-div-row > div {
+    flex: 0.40;
+    margin: auto 5px;
+    padding: 10px;
+}
+.upper-div-row > .card {
+    height: 200px;
+}
+.card{
+    box-shadow: 2px 4px 4px lightgray;
+}
+.c1{
+    color: grey;
+}
+.view-icon{
+    display: flex;
+    color:  #00a3da;
+}
+
+.fa-home{
+    height: 15px;
+    width: 15px;
+}
+
+.location {
+    line-height: 13px;
+}
+
+.vhr{
+    border: 1px solid lightgray;
+    height: 40px;
+    margin: 0px 15px;
+}
+
+.hr{
+    border: 1px solid lightgray;
+    width: 100%;
+}
+
+.toolbar {
+    justify-content: space-around;
+}
+
+.head{
+    color: gray;
+}
+.grid {
+    color: #00a3da;
+}
+
+
+.quantity-selector{
+    display: flex;
+}
+
+.quantity-input {
+  width: 20%;
+  text-align: center;
+  border: none;
+  background-color: #ee007f;
+  color: #fff;
+}
+
+.quantity-input::-webkit-inner-spin-button, 
+.quantity-input::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
+.btn-default{
+  color:#ee007f;
+  background-color: #ffffff;
+  border-color: #ee007f;
+  
+}
+
+.btn-save {
+    color: #fff;
+    background-color: #d8127d;
+    border-color: #d8127d;
+    padding: 10px 30px 10px 30px;
+    border-radius: 4px;
+    float: right;
+  }
+
+  .product-description {
+      display: flex;
+  }
+
+  .product-image{
+      width: 25px;
+      height: 25px;
+      margin-right : 10px;
+  }
+  

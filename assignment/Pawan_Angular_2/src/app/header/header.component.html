@@ -1,0 +1,46 @@
+<div class="bg-dark text-center notify-bar">
+  <span class="badge badge-pill badge-danger" (click)="open(AnnouncementModal)">Announcement</span>
+  <span class="text-white text-aside">How We're
+    Responding to COVID-19</span>
+  <!-- Announcement Modal -->
+  <ng-template #AnnouncementModal let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modal-basic-title">Announcement</h5>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>We are Working from Home in this Pandemic Situation to help prevent COVID-19</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="c('Save click')">Close</button>
+    </div>
+  </ng-template>
+</div>
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="#" title="Silver City"><i class="bi bi-shop float-left"></i>
+      <span class="float-left pt-1 pl-2">Silver City</span></a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto font-weight-bold">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" (click)="isMenuCollapsed = true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="isMenuCollapsed = true">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="isMenuCollapsed = true">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="isMenuCollapsed = true">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

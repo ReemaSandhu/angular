@@ -1,0 +1,167 @@
+<div class="container mt-5">
+    <div class="upper-div-row row">
+        <div class="card">  
+            <div class="row mt-3">
+                <div class="col-sm-1 mt-1" style="color:slategrey">
+                    <i class="fas fa-home fa-2x"></i></div>
+                <div class="col-sm-10 offset-1 location">
+                    <p> James Retails </p>
+                    <p class="c1">30 Shambles Street Barnsley YO17LX</p>
+                </div>
+            </div>
+                
+            <div class="hr mt-4"></div>
+
+            <div class="view-icon mt-5">
+                <span class="ml-2"><i class="fas fa-shopping-cart mr-2"></i>View Basket</span> 
+            
+              <span class="ml-5"><i class="fas fa-clipboard mr-2"></i>View Suggested</span>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <p class="c1 ml-3 mt-3">Select Duration</p> 
+            <span class="ml-3"><i class="fas fa-calendar-alt mr-2"></i> 16-Mar-2020 to 30-Jun-2021 </span>
+            <div class="hr mt-3"></div>
+            <div class="c1 mt-3 ml-3">
+                <p>Select Last Order</p>
+                <p>Select</p>
+            </div>
+            
+           
+        </div>
+
+
+        <div class="card">
+            <div class="row">
+                <div class="col-sm-2 mt-5" style="color: #00a3da"><i class="fas fa-lightbulb fa-2x mt-3 ml-4"></i></div>
+                <div class="col-sm-9 offset-1 location mt-5">
+                    
+                    <p class="c1">The Acceptance Rate</p>
+                    <p>30% Suggested Products</p> 
+                    <p>70% Added to Basket</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card col-md-12 mt-3 mb-4">
+
+        <div class="row mt-4 toolbar">
+            <div class="mt-4">
+                <i class="fas fa-search head"></i><span class="ml-2 head">Search Products  
+                 <hr></span>
+            </div>
+            <div class="head">
+               Category
+               <div class="dropdown">
+                <div class="dropdown-toggle" style="color: black;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Bagged Sweets
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <hr>
+              </div> 
+               
+            </div>
+            <div class="head">
+                Products
+                <div class="dropdown">
+                    <div class="dropdown-toggle" style="color: black;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      All Products
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    <hr>
+                  </div> 
+            </div>
+            <div class="">
+                <div class="form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Top Sellers</label>
+                </div>
+            </div>
+            <div class="">
+                <div class="form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Selected Products</label>
+                </div>
+            </div>
+            <div class="">
+                <i class="fas fa-th grid mt-4"></i>
+            </div>
+            <div class="">
+                <i class="fas fa-sliders-h head mt-4"></i>
+            </div>
+        </div>
+          
+          <table class="table mt-4">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">ProductCode</th>
+                <th scope="col">Description</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Cost</th>
+                <th scope="col">RSP</th>
+                <th scope="col">Margin</th>
+                <th scope="col">Category</th>
+                <th scope="col">LastOrder</th>
+                <th scope="col" style="width:10%">OrderedQty.</th>
+                <th scope="col">Action</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                
+                    <tr *ngFor="let product of products">
+                        <td><div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            {{product.id+100}}</div>
+                        </td>
+                        <td>
+                            <div class="product-description"> 
+                                <img class="product-image" src = {{product.image}}> 
+                                {{product.title}}
+                            </div>
+                        </td>
+                        <td>{{product.price + 100}}gm</td>
+                        <td>{{product.price}}</td>
+                        <td>${{product.id}}.00</td>
+                        <td>{{product.id *10}}%</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.id}}-Mar-2020</td>
+                        <td>
+                            <div class="quantity-selector">
+                            <button (click)="minus(product)" class="btn btn-default btn-sm">-</button>
+                            <input class="quantity-input" value={{product.quantity}} type="number" name="Quantity"/>
+                            <button class="btn btn-default btn-sm" (click)="plus(product)">+</button>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-trash-alt" style="color: lightcoral ;" > </i></td>
+
+                        
+                    </tr>
+                
+            </tbody>
+
+          </table>
+
+          <span class="mt-5 mb-3"><button type="button" class="btn btn-save ml-3">Add to Basket</button>
+              <button type="button" class="btn btn-save">Add to Suggested products</button>
+            </span>
+
+
+
+
+       
+    </div>
+
+
+</div>

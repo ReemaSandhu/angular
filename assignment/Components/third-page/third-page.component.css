@@ -1,0 +1,38 @@
+.link a {
+    text-decoration: none;
+}
+
+.link {
+    margin: 17px;
+    margin-left: 9%;
+}
+
+.change {
+    color: #ee007f;
+    float: right;
+}
+
+h3 {
+    display: inline;
+    margin-left: 10px;
+}
+
+.card1 {
+    margin-left: 25px;
+}
+
+.icon3 {
+    margin-left: 10px;
+}
+
+.icon2,
+.icon3,
+.basket,
+.sugg {
+    color: rgb(8, 169, 218);
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid grey;
+}

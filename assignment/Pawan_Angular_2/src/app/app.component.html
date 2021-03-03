@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container">
+  <h1 class="my-5">Silver City</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Style binding - Conditional -->
+      <h3 [style.color]="err?'#dc3545':color">Style Binding</h3><br>
+      <button class="btn btn-danger mb-3" (click)="updateColor()">Click to Toggle Color</button>
+      <!-- Passing data from parent to child -->
+      <app-body [data]="data" [users]="users" (parentComponent)="parentComponent($event)"></app-body>
+      <!-- Give a name to property which will pass your data to child -->
+      <!-- Receiving data from child -->
+      <p *ngIf="got_from_child != ''">Data Received from Child is: {{got_from_child}}</p>
+      <!-- Directives -->
+      <p appCustomStyle>This is a Paragraph with Custom Directive</p>
+    </div>
+    <div class="col-md-6">
+      <!-- Pipes - Examples -->
+      <p>{{username | uppercase}} - Upper Case</p> <!-- Convert in Upper Case -->
+      <p>{{username | titlecase}} - Title Case</p> <!-- First Letter Capital -->
+      <p>Date Today is: {{today | date}}</p> <!-- Unix timestamp to humand readable date -->
+      <p>Date Today is: {{today | date:'fullDate'}}</p> <!-- Full date including day -->
+      <p>{{username | slice:0:5}} - Slicing Example</p> <!-- Slicing -->
+      <p>{{amount | currency:'USD'}} - Currency Conversion</p> <!-- Currency Conversion -->
+      <!-- Routing -->
+      <a routerLink="new" class="btn btn-outline-danger mb-2">Go to New Page</a>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- Display data from API -->
+  <h2>Posts by Our Users:</h2>
+  <div class="row">
+    <div class="col-sm-6 my-3" *ngFor="let post of posts | slice: (page-1) * pageSize : page * pageSize">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">{{post.body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 justify-content-center my-4">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" aria-label="Default pagination">
+      <ng-template ngbPaginationFirst>First</ng-template>
+      <ng-template ngbPaginationLast>Last</ng-template>
+      <ng-template ngbPaginationPrevious>Prev</ng-template>
+      <ng-template ngbPaginationNext>Next</ng-template>
+      <ng-template ngbPaginationEllipsis>...</ng-template>
+      <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+    </ngb-pagination>
+  </div>
+</div>
+<app-footer></app-footer>

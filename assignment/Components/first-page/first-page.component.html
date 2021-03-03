@@ -1,0 +1,114 @@
+<div class="link">
+    <a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+      </svg>
+    </a>
+    <a href="#">Back to previous</a>
+</div>
+<div class="container shadow-lg bg-white">
+    <div class="row content">
+        <div class="col-md-4 mb-3 text-center upload">
+            <img [src]="url">
+            <br>
+            <input type="file" (change)="onSelectFile($event)">
+            <a href="#">Update Photo</a>
+        </div>
+        <div class="col-md-7 form">
+            <h1 class="text mb-3">Hi, Dave Lambert</h1>
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Code</label>
+                    <input class="form-control code" type="number" name="code" placeholder="7865" tabindex="1" formControlName="code" [ngClass]="{'is-invalid': f.code.invalid && f.code.touched}" />
+                    <div class="invalid-feedback" *ngIf="f.code.errors">
+                        <div *ngIf="f.code.errors.required">
+                            Please enter code
+                        </div>
+                        <div *ngIf="f.code.errors.min">
+                            Code should be minimum 4 digits
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input class="form-control fname" type="text" name="name" placeholder="Dave" tabindex="2" formControlName="fname" [ngClass]="{'is-invalid': f.fname.invalid && f.fname.touched}" />
+                    <div class="invalid-feedback" *ngIf="f.fname.errors">
+                        <div *ngIf="f.fname.errors.required">
+                            Please enter your name
+                        </div>
+                        <div *ngIf="f.fname.errors.minlength">
+                            please enter atleast 4 characters
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input class="form-control lname" type="text" name="name" placeholder="Lambert" tabindex="4" formControlName="lname" [ngClass]="{'is-invalid': f.lname.invalid && f.lname.touched}" />
+                    <div class="invalid-feedback" *ngIf="f.lname.errors">
+                        <div *ngIf="f.lname.errors.required">
+                            Please enter your name
+                        </div>
+                        <div *ngIf="f.lname.errors.minlength">
+                            please enter atleast 4 characters
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control email" type="email" name="name" tabindex="3" placeholder="dave.lambert@gmail.com" formControlName="email" [ngClass]="{'is-invalid': myForm.get('email').invalid && myForm.get('email').touched}">
+                    <div class="invalid-feedback" *ngIf="f.email.errors">
+                        <div *ngIf="myForm.get('email').errors.email">
+                            Please Enter valid email
+                        </div>
+                        <div *ngIf="myForm.get('email').errors.required">
+                            Please Enter your email
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input class="form-control mobile" type="number" name="code" placeholder="+44 87654321" tabindex="5" formControlName="mobile" [ngClass]="{'is-invalid': f.mobile.invalid && f.mobile.touched}" />
+                    <div class="invalid-feedback">
+                        Please enter Mobile Number
+                    </div>
+                </div>
+                <button class="btn save" data-toggle="modal" data-target="#modaldata" [disabled]="myForm.invalid"> Save </button>
+                <button class=" btn cancel">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modaldata" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Entered Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" *ngFor="let form of data">
+                        <!-- <div class="card"> -->
+                        <!-- <img src="{{form.avatar}}" alt=""> -->
+                        <div class="card-body">
+                            <h3 class="card-title">Code:-{{form.code}}</h3>
+                            <h3 class="card-subtitle">First Name:-{{form.fname}} </h3>
+                            <h3 class="card-text">Last Name:-{{form.lname}}</h3>
+                            <h3 class="card-text">Email:-{{form.email}}</h3>
+                            <h3 class="card-text">Mobile Number:-{{form.mobile}}</h3>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+
+.sections{
+    display: flex;
+}
+
+.card{
+    box-shadow: 2px 4px 4px lightgray;
+}
+
+.active-status {
+    display: flex;
+}
+
+#status{
+    color: grey;
+}
+
+#active{
+    color: green;
+}
+
+.btn-save {
+    color: #fff;
+    background-color: #d8127d;
+    border-color: #d8127d;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 10px 30px 10px 30px;
+    border-radius: 4px;
+  }
+
+  .item {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      margin: 3px
+  }
+
+  
+  .item-title {
+      color: grey;
+      font-size: 18px;
+  }
+
+  .sections-edit {
+    float: right;
+    height: fit-content
+  }
+
+  .sections-edit img{
+      width: 20px;
+      height : 20px;
+  }
+
+  #edit{
+      color: #00a3da;
+      font-size:13px;
+  }
+  .storeDetails{
+      font-size: 20px;
+      font-weight: 100;
+  }
+   
+  .active{
+      color: #00a3da;
+  }
+
+  #para{
+      color: grey;
+      font-size: 18px;
+      font-weight: lighter;
+  }
+
+.content{
+    height: 250px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    height: 30%;
+    margin-top: 10px;
+    background: hsl(328, 85%, 46%);
+    border-radius: 1rem;
+  }
+
+  .offer-item{
+      width: 100%;
+      font-size: medium;
+  }
+  
+  .offer-item a {
+      float: right;
+      margin-right: 50px;
+      text-decoration: none;
+      color: grey;
+      font-size: medium;
+  }
+
+  .apply{
+      background-color: lightgray;
+      color: black;
+      font-size: medium;
+      text-decoration: none;
+      border: 0px;
+      margin: 4px;
+  }
+
+  #footer-head{
+      font-size: xx-large;
+      color: #d8127d;
+      margin-bottom: 2px;
+  }
+
+  #footer-para{
+      font-size: medium;
+      color: grey;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    
+  }
+
+  .border-rounded-pill{
+      border: 1px solid lightgray;
+      box-shadow: 2px 4px 4px lightgray;
+  }
+
+  .sub-head{
+      color: grey;
+      font-size: medium;
+  }
+  .form-check-input{
+    width: 15px; 
+    height: 15px;
+  }
+
+  .card-store{
+      border : 0px solid white !important;
+      box-shadow: none !important;
+      border-bottom: 1px solid lightgrey !important;
+  }
+
+  .store-container{
+    height: 99vh;
+    overflow-y: auto;
+  }
+
+  .btn-change{
+    color: #fff;
+    background-color: #d8127d;
+    border-color: #d8127d;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 10px 30px 10px 30px;
+    border-radius: 4px;
+      margin-top: 20px;
+      margin-right : 90px  !important;
+      width: 385px;
+  }
+  

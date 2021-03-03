@@ -1,0 +1,43 @@
+.notify-bar {
+    height: 2.5rem;
+}
+
+.badge {
+    padding: 9px;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.text-aside {
+    margin-left: 4px;
+}
+
+.nav-link {
+    color: #fff!important;
+    opacity: 0.6;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.active {
+    color: #fff;
+    opacity: 1;
+}
+
+.active:hover {
+    opacity: 1;
+}
+
+@media (max-width: 401px) {
+    .notify-bar {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 285px) {
+    .notify-bar .text-aside {
+        display: none;
+    }
+}

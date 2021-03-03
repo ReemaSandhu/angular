@@ -1,0 +1,47 @@
+<h2 class="text-center ">PRACTICE</h2>
+<p appHighlight>Highlight me!</p>
+<div class="text-center"><input type="text" [(ngModel)]="textt" (change)="func()"></div>
+<h4 class="text-center">{{textt}}</h4>
+<br/>
+<h4 class="text-center">{{date}}<br/>
+    <h4 class="text-center">{{date |date}}</h4><br/>
+    <h2 class="text-center ">DATA FROM PARENT IN OBJECT</h2>
+    <div class="container">
+        <div class=" row">
+            <div *ngFor="let user of data" class="col-4">
+                <app-card [roll_no]="user.roll_no" [name]="user.name" [age]="user.age" [branch]="user.branch"></app-card>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-outline-primary text-center" (click)="getData()"> get data</button>
+    <!--[ngClass]= "'red': user.completed=='false'"-->
+    <div class="container">
+        <div class=" row">
+            <div *ngFor="let user of users |paginate: { id: 'listing_pagination',
+        itemsPerPage: 9,
+        currentPage: page,
+        totalItems: totalRecords }" class="col-4">
+                <div class="card">
+                    <div class="card-header "> USER: {{user.userId}}</div>
+                    <div class="card-body">
+                        <h3> ID : {{user.id}} </h3>
+                        <h4>Work Title: {{user.title}}</h4>
+                        <h4> Completed: {{user.completed}}</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <pagination-controls class="page" id="listing_pagination" maxSize="10" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+        </div>
+    </div>
+    <!--<div class="card">
+            <div class="card-header">{{user.name}}</div>
+            <div class="card-body">
+                <h3> NAME : {{user.name}} </h3>
+                 <h4>ROLL NO: {{user.roll_no}}</h4>
+                <h4> AGE: {{user.age}}</h4>
+                <h4>BRANCH: {{user.branch}}</h4>
+            </div>
+        </div>-->

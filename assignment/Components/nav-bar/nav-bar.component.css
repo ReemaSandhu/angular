@@ -1,0 +1,27 @@
+.navbar-header img {
+    margin: auto;
+}
+
+nav {
+    height: 70px;
+}
+
+form img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.dropdown-toggle {
+    color: white;
+    margin-right: 50px;
+    margin-bottom: 18px;
+}
+
+.nav-link {
+    margin-top: 20px;
+}
+
+.user {
+    color: #fff;
+}

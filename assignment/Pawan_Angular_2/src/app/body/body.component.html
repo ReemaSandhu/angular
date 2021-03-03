@@ -1,0 +1,9 @@
+<!-- Receiving data from Parent -->
+<p class="lead">Name Received from Parent: {{data}}</p>
+
+<div *ngFor="let user of users">
+    <p class="muted">{{user.name}} - {{user.age}} - {{user.city}}</p>
+</div>
+
+<!-- Sending data to parent -->
+<button class="btn btn-danger mb-3" (click)="sendData()">Send data to Parent Console</button>

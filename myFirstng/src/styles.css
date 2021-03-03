@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-item.active .page-link {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.page-link {
+    color: #dc3545;
+}
+
+.page-link:hover {
+    color: red;
+}
+
+.page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.40);
+}
