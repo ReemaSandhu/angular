@@ -1,0 +1,140 @@
+<div class="link">
+    <a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+      </svg>
+    </a>
+    <a href="#">Back</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <button class="btn multi">
+                        +Add Multiuser
+                    </button>
+                    <h2 class="card-title">Retailers Information</h2>
+                    <p>Status:<span class="text-muted"> Active</span></p>
+                    <hr>
+                    <div class="edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil " viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                      </svg>Edit</div>
+                    <br>
+                    <div class="details" *ngFor="let users of products">
+                        <div class="row">
+                            <div class="col-6 col-md-6">
+                                <h4 class="text-muted">Account Name</h4>
+                                <h4 class="data">{{users.acName}}</h4>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <h4 class="text-muted">Retailer's First Name</h4>
+                                <h4 class="data">{{users.fname}}</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-6">
+                                <h4 class="text-muted">Retailer's Last Name</h4>
+                                <h4 class="data">{{users.lname}}</h4>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <h4 class="text-muted">Email</h4>
+                                <h4 class="data">{{users.email}}</h4>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <h4 class="text-muted">Contact Number</h4>
+                                <h4 class="data">{{users.mobile}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs">
+                <tabset>
+                    <tab heading="Store Details" id="tab1">
+                        <br/>
+                        <div>
+                            <div class="text-muted">Configure promotions at retailer level for all stores</div><br/>
+                            <div class="black">All Offers and Promotions</div><br/>
+                            <div class="container">
+                                <div class="black" *ngFor="let user of service.results">
+                                    <div class=" text-left offer">{{user.email}}</div>
+                                    <div class="text-muted add">+ Add to All</div>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Multiusers">
+                        <br/>
+                        <div>
+                            <div class="text-muted">Configure promotions at retailer level for all stores</div><br/>
+                            <div class="black">All Offers and Promotions</div><br/>
+                            <div class="container">
+                                <div class="black" *ngFor="let user of service.results">
+                                    <div class=" text-left offer">{{user.username}}</div>
+                                    <div class="text-muted add">+ Add to All</div>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Offers & Promotions">
+                        <br/>
+                        <div>
+                            <div class="text-muted">Configure promotions at retailer level for all stores</div><br/>
+                            <div class="black">All Offers and Promotions</div><br/>
+                            <div class="container">
+                                <div class="black" *ngFor="let user of service.results">
+                                    <div class=" text-left offer">{{user.name}}</div>
+                                    <div class="text-muted add">+ Add to All</div>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title">15% off on Kids Novelty</h2>
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input class="shadow-lg" id="search-input" type="search" id="form1" placeholder="Search to add stores" class="form-control" />
+                        </div>
+                        <div *ngFor="let user of service.results ">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      <input type="checkbox" name="" id="">
+                                            Store {{user.id}}<br/>
+                                            <p class="text-muted stores">30 Shambles, York Y017lX</p>
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body" *ngFor="let offer of Stores">
+                                            <button class="btn btn-secondary">{{offer.off1}}</button>
+                                            <button class="btn btn-secondary">{{offer.off2}}</button>
+                                            <button class="btn btn-secondary">{{offer.off3}}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn2">Save Changes</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+
+    <h2 class="footer">All Stores are dealt with !</h2>
+    <p>You are now ready to activate the retailer</p>
+</div>

@@ -1,0 +1,85 @@
+<div class="box12">
+    <a class="back" [routerLink]="['/page2']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg> Back to previous
+    </a>
+</div>
+<div class="container  ">
+
+    <div class="row shadow-lg bg-white rounder box1">
+        <div class="col-4">
+            <div class="box">
+                <img [src]="url" class="rounded-circle" alt="">
+            </div>
+            <p class="text-center">Update Photo</p>
+            <input type="file" class="file" (change)="onChange($event)">
+        </div>
+        <div class="col-8">
+            <h1>Hi, Reema Sandhu</h1>
+            <form class="col-8" [formGroup]="myForm">
+                <div class="form-group">
+                    <label class="text-muted">Code</label>
+                    <input class="form-control password" type="text" placeholder="7865" formControlName="code" [ngClass]="{'is-invalid':myForm.get('code').invalid && myForm.get('code').touched}" />
+                    <div class="invalid-feedback"> Please Enter Code </div>
+                </div>
+                <div class="form-group">
+                    <label class="text-muted"> FIRST NAME</label>
+                    <input class="form-control name" name="name" type="text" placeholder="Reema" formControlName="first" [ngClass]="{'is-invalid':myForm.get('first').invalid && myForm.get('first').touched}" />
+                    <div class="invalid-feedback" [ngClass]="{'is-invalid':myForm.get('first').invalid && myForm.get('first').touched}">
+                        <div *ngIf="myForm.get('first').errors">Please Enter First Name</div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="text-muted">LAST NAME</label>
+                    <input class="form-control name" type="text" placeholder="Sandhu" formControlName="last" [ngClass]="{'is-invalid':myForm.get('last').invalid && myForm.get('last').touched}" />
+                    <div class="invalid-feedback" [ngClass]="{'is-invalid':myForm.get('last').invalid && myForm.get('last').touched}">
+                        <div *ngIf="myForm.get('last').errors">Please Enter Last Name</div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="text-muted">EMAIL</label>
+                    <input class="form-control email" type="email" placeholder="sandhureema@gmail.com" formControlName="email" [ngClass]="{'is-invalid':myForm.get('email').invalid && myForm.get('email').touched}" />
+                    <div class="invalid-feedback" *ngIf="myForm.get('email').errors">
+                        <div *ngIf="myForm.get('email').errors.required">Please Enter Email</div>
+                        <div *ngIf="myForm.get('email').errors.email">Please Enter Valid email</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="text-muted">Mobile Number</label>
+                    <input class="form-control password" type="text" placeholder="+44 87654321" formControlName="number" [ngClass]="{'is-invalid':myForm.get('number').invalid && myForm.get('number').touched}" />
+                    <div class="invalid-feedback"> Please Enter Mobile number</div>
+                </div>
+
+                <button class="btn btn-outline-danger mt-2 bm-2 mr-2 submit" type="submit" data-toggle="modal" data-target="#exampleModal"> Save</button>
+                <button class="btn btn-outline-danger mt-2 bm-2 ml-2 cancel" type="button"> Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{myForm.value.first}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li>Name: {{myForm.value.first}} {{myForm.value.last}}</li>
+                    <li>Code: {{myForm.value.code}}</li>
+                    <li>Email: {{myForm.value.email}}</li>
+                    <li>Mobile Number: {{myForm.value.number}}</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

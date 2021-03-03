@@ -1,0 +1,96 @@
+/* accordian formatting */
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none
+}
+
+.btn-link {
+    width: 100%;
+}
+
+
+/* button */
+
+.btn-pink {
+    background-color: #ee007f;
+    border-color: #ee007f;
+    color: white;
+}
+
+.btn-pink:hover,
+.btn-pink:focus {
+    background-color: rgb(238, 0, 127);
+    border-color: rgb(238, 0, 127);
+    outline: none;
+}
+
+.btn-pink:disabled {
+    background-color: #f00080;
+    border-color: #f00080;
+    outline: none;
+}
+
+.btn-outline-pink:hover {
+    background-color: #ee007f;
+    border-color: white;
+    color: white;
+    outline: none;
+}
+
+.btn-outline-pink {
+    color: rgb(238, 0, 127);
+    border-color: rgb(238, 0, 127);
+}
+
+.btn-pink:focus,
+.btn-outline-pink:focus {
+    box-shadow: 0 0 0 .2rem rgba(238, 0, 127, .5);
+    outline: none;
+}
+
+.btn-pink:not(:disabled):not(.disabled):active,
+.btn-outline-pink:not(:disabled):not(.disabled):active {
+    background-color: rgb(238, 0, 127);
+    border-color: rgb(238, 0, 127);
+    outline: none;
+}
+
+
+/* back arrow */
+
+.back {
+    padding: 20px 25px 20px 30px;
+    /* trbl */
+    font-size: 16px;
+}
+
+.back-link {
+    color: rgb(45, 161, 251);
+    margin: 5px;
+}
+
+.back-link:hover {
+    color: rgb(45, 161, 251);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bi-arrow-left {
+    color: rgb(45, 161, 251);
+}
+
+.main-box {
+    box-shadow: 1px 1px 4px 1px rgb(228, 216, 216);
+    margin: 30px 30px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.pink {
+    color: rgb(238, 0, 127);
+}

@@ -1,0 +1,151 @@
+.container {
+    margin-top: 1%;
+}
+
+.back {
+    color: #17abdd;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: -9%;
+}
+
+.box12 {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    padding-left: 11%;
+}
+
+.status {
+    margin-top: -3%;
+}
+
+.inline {
+    display: inline;
+}
+
+.height {
+    height: 100%;
+}
+
+h1 {
+    font-size: 23px;
+    padding-top: 3%;
+    color: #363342;
+}
+
+.active {
+    color: #8ac24a;
+}
+
+.top {
+    border-bottom: 1.5px solid silver;
+    border-radius: 0px;
+    padding-bottom: 2%;
+}
+
+.btn-outline-danger {
+    background-color: #ee007f;
+    font-size: small;
+    margin-top: 5% !important;
+    float: right;
+    color: #fff;
+}
+
+.edit {
+    padding-top: 2%;
+    float: right;
+    font-size: small;
+    color: #30b4e1;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.search {
+    width: 100%;
+    border: none;
+    height: 6%;
+    margin-top: 2%;
+    padding-left: 9%;
+    border-bottom: 1.5px solid silver;
+    font-size: 16px;
+}
+
+.accordion {
+    padding-top: 2%;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.caption {
+    font-size: small;
+}
+
+.tags {
+    font-size: small;
+    font-weight: 600;
+}
+
+.store {
+    font-size: large;
+    font-weight: 600;
+}
+
+.icon-angle-down {
+    float: right;
+}
+
+.down {
+    width: 100%;
+}
+
+accordion-group {
+    padding: 0px !important;
+}
+
+.black {
+    color: black;
+}
+
+.right {
+    float: right;
+}
+
+tabset {
+    font-size: small;
+}
+
+tab {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.chota {
+    font-size: 15px;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    margin-top: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    height: 30%;
+    margin-top: 10px;
+    background: hsl(328, 85%, 46%);
+    border-radius: 1rem;
+}
+
+.footer {
+    color: #ee007f;
+}

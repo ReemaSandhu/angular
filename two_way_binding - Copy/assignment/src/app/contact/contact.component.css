@@ -1,0 +1,64 @@
+.section {
+    background-color: rgb(251, 251, 251);
+}
+
+.main-box {
+    box-shadow: 1px 1px 4px 1px rgb(228, 216, 216);
+    margin: 30px 20px;
+    border-radius: 5px;
+}
+
+
+/* form */
+
+label {
+    font-size: 14px;
+    padding: 12px 0 0 0;
+    color: rgb(162, 169, 176);
+}
+
+input {
+    padding: 5px 0;
+    border: none;
+    background-color: rgb(251, 251, 251);
+    font-size: 16px;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(162, 169, 176);
+    width: 65%;
+}
+
+input:focus {
+    box-shadow: none;
+    background-color: rgb(251, 251, 251);
+}
+
+
+/* update profile color */
+
+.update {
+    color: rgb(238, 0, 127);
+}
+
+
+/* profile */
+
+.profile {
+    border-radius: 50%;
+    border: 1px solid lightblue;
+}
+
+
+/* back arrow color */
+
+.bi {
+    color: rgb(45, 161, 251);
+}
+
+@media(max-width: 768px) {
+    input {
+        width: 100%;
+    }
+    .profile {
+        max-width: 50%;
+    }
+}

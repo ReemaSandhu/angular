@@ -1,0 +1,78 @@
+.link a {
+    text-decoration: none;
+}
+
+.link {
+    margin: 17px;
+    margin-left: 9%;
+}
+
+.icon {
+    color: blue;
+}
+
+span {
+    color: rgb(113, 233, 16);
+}
+
+.multi {
+    background-color: #ee007f;
+    color: #fff;
+    float: right;
+}
+
+.btn2 {
+    background-color: #ee007f;
+    color: #fff;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer {
+    color: #ee007f;
+}
+
+.edit {
+    float: right;
+    color: rgb(6, 115, 165)
+}
+
+.data {
+    line-height: 0.6;
+}
+
+.offer {
+    display: inline;
+}
+
+.form-outline {
+    width: 100%;
+}
+
+.add {
+    display: inline;
+    float: right;
+}
+
+input[type=search] {
+    display: inline-block;
+}
+
+.nav-tabs a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.nav-tabs,
+.promo {
+    margin-top: 20px;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.accordion-body button {
+    margin: 5px;
+}

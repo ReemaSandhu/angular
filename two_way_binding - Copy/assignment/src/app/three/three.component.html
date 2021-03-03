@@ -1,0 +1,232 @@
+<!-- back -->
+<div class="back">
+    <i class="bi bi-arrow-left"></i>
+    <a class="back-link" href="history.go(-1)">Back</a>
+</div>
+
+<!-- top three sections -->
+<div class="row" style="width: 100%;">
+    <!--Section 1  -->
+    <div class="col-md-4 section1 p-0">
+        <div class="card">
+            <div class="card-header">
+                <div class="row float-right mx-2">
+                    <span class="pink"><i class="bi bi-arrow-clockwise"></i> Cancel</span>
+                </div>
+                <div class="row my-2">
+                    <div class="media">
+                        <i class="bi bi-shop-window mr-3 mt-4 text-grey"></i>
+                        <div class="media-body">
+                            <h6 class="mt-3">Janes Retails</h6>
+                            <p class="text-grey">30 Shambles Street Barnsley YO1 7LX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row pb-0">
+                    <div class="col-md-5 p-0">
+                        <i class="bi bi-cart3 ml-3"></i><a class="basket ml-2" href="">View Basket</a>
+                    </div>
+                    <div class="col-md-5 p-0">
+                        <i class="bi bi-journal-richtext ml-1"></i><a class="suggestion ml-1" href=""> View
+                            Suggestion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section2 -->
+    <div class="col-md-4 section2-3 p-0">
+        <div class="row float-right mx-2 p-2">
+            <span class="pink"><i class="bi bi-x"></i> Cancel</span>
+        </div>
+        <div class="row">
+            <h6 class="text-grey mt-3 mx-3 mb-0">Select Duration</h6>
+            <form class="form-inline mx-3 line">
+                <div class="input-group mt-0">
+                    <div class="input-group-append">
+                        <i class="bi bi-calendar3 mt-1 mr-2"></i>
+                    </div>
+                    <input type="date" name="from-date" [(ngModel)]="model" #d1="ngbDatepicker" ngbDatepicker (click)="d1.toggle()" id="from-date" class="form-control p-0">
+                </div>
+                <span class="text-muted mt-0">to</span>
+                <input type="date" name="to-date" [(ngModel)]="model" #d2="ngbDatepicker" ngbDatepicker (click)="d2.toggle()" id="to-date" class="form-control ml-3 p-0">
+            </form>
+        </div>
+        <div class="text-center">
+            <span class="dot">OR</span>
+        </div>
+        <div class="row mx-4 line mb-3">
+            <div ngbDropdown>
+                <p class="text-grey">Select Last Order</p>
+                <button class="btn text-grey bg-white dropdown-btn p-0" id="dropdownBasic1" type="button" ngbDropdownToggle>
+                    Select <i class="bi bi-chevron-down text-dark float-right ml-4"></i></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button class="nav-list" ngbDropdownItem>Item-1</button>
+                    <button class="nav-list" ngbDropdownItem>Item-2</button>
+                    <button class="nav-list" ngbDropdownItem>Item-3</button>
+                    <button class="nav-list" ngbDropdownItem>Item-4</button>
+                    <button class="nav-list" ngbDropdownItem>Item-5</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section3 -->
+    <div class="col-md-3 section2-3 p-0">
+        <div class="card">
+            <div class="card-header" style="border: none;">
+                <div class="row text-grey ml-5 pt-3">
+                    <p style="font-size: 22px;">The Acceptance Rate</p>
+                </div>
+            </div>
+            <div class="card-body p-2">
+                <div class="media ml-1">
+                    <i class="bi bi-lightbulb mr-3"></i>
+                    <div class="media-body mt-2">
+                        <p><b>30%</b> Suggested Products</p>
+                        <p><b>70%</b> Added to Basket</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Form -->
+<div class="main-box">
+    <div class="card">
+        <div class="card-header">
+            <form class="form-inline row">
+                <!-- Search -->
+                <div class="col-md-3 mx-4 mr-2">
+                    <div class="input-icon">
+                        <i class="bi bi-search icon"></i>
+                        <input type="text" placeholder="Search Products" id="search">
+                    </div>
+                </div>
+                <!-- Category -->
+                <div class="col-md-2.5 ml-5 my-2">
+                    <p class="text-grey">Category</p>
+                    <div ngbDropdown class="line">
+                        <button class="btn text-dark bg-white dropdown-btn p-0" id="dropdownBasic1" type="button" ngbDropdownToggle>
+                            Bagged Sweets <i class="bi bi-chevron-down text-dark float-right ml-4"></i></button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button class="nav-list" ngbDropdownItem>Item-1</button>
+                            <button class="nav-list" ngbDropdownItem>Item-2</button>
+                            <button class="nav-list" ngbDropdownItem>Item-3</button>
+                            <button class="nav-list" ngbDropdownItem>Item-4</button>
+                            <button class="nav-list" ngbDropdownItem>Item-5</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products -->
+                <div class="col-md-2.5 ml-5 my-2">
+                    <p class="text-grey">Products</p>
+                    <div ngbDropdown class="line">
+                        <button class="btn text-dark bg-white dropdown-btn p-0" id="dropdownBasic1" type="button" ngbDropdownToggle>
+                            All Products <i class="bi bi-chevron-down text-dark float-right ml-5"></i></button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button class="nav-list" ngbDropdownItem>Product-1</button>
+                            <button class="nav-list" ngbDropdownItem>Product-2</button>
+                            <button class="nav-list" ngbDropdownItem>Product-3</button>
+                            <button class="nav-list" ngbDropdownItem>Product-4</button>
+                            <button class="nav-list" ngbDropdownItem>Product-5</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- rest -->
+                <div class="col-md-3.5 d-inline-block align-middle my-2 mx-5">
+                    <div class="form-check">
+                        <label class="form-check-label mr-4" for="flexCheckChecked">
+                            <input class="form-check-input mr-2 cb-input" type="checkbox" value="top-sellers">
+                            Top Sellers
+                        </label>
+                        <label class="form-check-label mr-4" for="flexCheckChecked">
+                            <input class="form-check-input mr-2 cb-input" type="checkbox" value="selected-products">
+                            Selected Products
+                        </label>
+                        <i class="bi bi-grid-3x3-gap mr-4"></i>
+                        <i class="bi bi-list-ul text-grey"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-body">
+            <!-- Table -->
+            <div class="px-4 py-3" style="overflow-x: auto;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Code</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Unit</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">RSP</th>
+                            <th scope="col">Margin</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Last Order</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of orders; let e = even; let i = index">
+                            <td class="code">
+                                <label class="form-check-label mx-5" for="flexCheckChecked">
+                                    <input class="form-check-input mr-1 cb-input" type="checkbox" value="">
+                                    {{order.id}}
+                                </label>
+                            </td>
+                            <td><img class="mr-1" src={{order.url}} alt="chips" width="30" height="30">{{order.name}}
+                            </td>
+                            <td>{{order.unit | units}}</td>
+                            <td>{{order.cost | currency:'GBP'}}</td>
+                            <td>{{order.rsp | currency: 'GBP'}}</td>
+                            <td>{{order.margin/100 | percent : '1.2' }}</td>
+                            <td>{{order.category}}</td>
+                            <td>{{lastOrder | date : 'MMMM d, y'}}</td>
+                            <!-- <td><span class="text-primary mr-3 my-auto">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" (click)="orders[i].quantity = orders[i].quantity - 1"
+                                            class="btn btn-outline-pink qty"><i class="bi bi-plus"></i></button>
+                                        <button type="button"
+                                            class="btn btn-pink number">{{order.quantity}}</button>
+                                        <button type="button" (click)="orders[i].quantity = orders[i].quantity + 1"
+                                            class="btn btn-outline-pink qty"><i class="bi bi-dash"></i></button>
+                                    </div>
+                                </span></td> -->
+                            <td scope="col">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="qty" (click)="orders[i].quantity = orders[i].quantity + 1"><i class="bi bi-plus"></i></button>
+                                    <button type="button" class="number">{{order.quantity}}</button>
+                                    <button type="button" class="qty" (click)="orders[i].quantity = orders[i].quantity - 1"><i class="bi bi-dash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Squares and Two end Buttons -->
+            <div class="row my-3">
+                <div class="col-md-8">
+                    <i class="bi bi-square-fill ml-3 mr-1" style="color: rgb(255, 0, 0);"></i> <span>Not Ordered</span>
+                    <i class="bi bi-square-fill ml-3 mr-1" style="color: rgb(0, 128, 0);"></i> <span>Ordered</span>
+                    <i class="bi bi-square-fill ml-3 mr-1" style="color: rgb(255, 165, 0);"></i> <span>Previously
+                        Ordered</span> <br />
+                    <i class="bi bi-square-fill ml-3 mr-1" style="color: rgb(216, 112, 147);"></i> <span>In Retailers
+                        Basket</span>
+                    <i class="bi bi-square-fill ml-3 mr-1" style="color: rgb(185, 178, 178);"></i> <span>Already Added
+                        to Basket/Suggested Products</span>
+
+                </div>
+                <div class="float-right p-3 my-2">
+                    <button type="button" class="btn btn-pink m-2 p-2">Add to Suggested Products</button>
+                    <button type="button" class="btn btn-pink m-2 p-2">Add to Basket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

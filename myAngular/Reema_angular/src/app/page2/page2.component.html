@@ -1,0 +1,129 @@
+<div class="box12">
+    <a class="back" [routerLink]="['/']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg> Back
+        <!-- <i class="icon-long-arrow-right"></i> -->
+    </a>
+</div>
+<div class="container">
+
+    <div class="row chota">
+        <div class="col-7">
+            <div class=" shadow-lg bg-white rounder container">
+                <div class="row top">
+                    <div class="col-6 ">
+                        <h1>Retailers Information</h1>
+                        <div class="status">
+                            <div class="text-muted inline">Status: </div>
+                            <div class="active inline">Active</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-danger mt-2 bm-2 mr-2">+ Add Multiusers</button>
+                    </div>
+                </div>
+                <div class="edit">
+                    <!-- <i  class='far'>&#xf044;</i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                      </svg> Edit
+                </div><br/><br/>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-muted">Account Name</div>
+                        <div>James Smith Retail, Landon</div><br/>
+                        <div class="text-muted">Retailer's Last Name</div>
+                        <div>Brown</div><br/>
+                        <div class="text-muted">Contact Number</div>
+                        <div>+44 123 456 7890</div><br/>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-muted">Retailer's First Name</div>
+                        <div>James</div><br/>
+                        <div class="text-muted">Email</div>
+                        <div>retail.james@gmail.com</div><br/>
+                    </div>
+                </div>
+
+
+            </div> <br/>
+            <div class="shadow-lg bg-white rounder container scrollbar">
+                <tabset>
+                    <tab heading="Store Details">
+                        <br/>
+                        <div class="text-muted">Configure Promotions at retailer level for all stores</div><br/>
+                        <div class="black">ALL Offers and Promotions</div><br/>
+                        <div class="container">
+                            <div class="black " *ngFor="let user of users">
+                                <div class="inline">{{user.email}} </div>
+                                <div class="text-muted right inline">+ add to All</div>
+                                <br/><br/>
+
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Multiusers">
+                        <br/>
+                        <div class="text-muted">Configure Promotions at retailer level for all stores</div><br/>
+                        <div class="black">ALL Offers and Promotions</div><br/>
+                        <div class="container">
+                            <div class="black " *ngFor="let user of users">
+                                <div class="inline">{{user.website}} </div>
+                                <div class="text-muted right inline">+ add to All</div>
+                                <br/><br/>
+
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Offers & Promotions">
+                        <br/>
+                        <div class="text-muted">Configure Promotions at retailer level for all stores</div><br/>
+                        <div class="black">ALL Offers and Promotions</div><br/>
+                        <div class="container">
+                            <div class="black " *ngFor="let user of users">
+                                <div class="inline">{{user.name}} </div>
+                                <div class="text-muted right inline">+ add to All</div>
+                                <br/><br/>
+                            </div>
+                        </div>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class=" shadow-lg bg-white rounder height container heading">
+                <h1>15% off on Kids Novelty</h1>
+                <input type="text" class="search shadow-lg bg-white" placeholder="Search to add store"><br/><br/>
+                <accordion [isAnimated]="true" class="accordion">
+                    <accordion-group *ngFor="let user of data">
+                        <span accordion-heading>
+                            <div class="store">
+                             <input type="checkbox" name="store1">
+                              {{user.store}} 
+                              <i class="icon-angle-down"></i> 
+                            </div>
+                            <p class="content text-muted ml-3">{{user.caption}}</p>
+                        </span>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="content text-muted tags">{{user.content}} <i style="padding-left: 1%;" class="icon-remove"></i></div>
+
+                            </div>
+                            <div class="col-6">
+                                <div class="content text-muted tags">{{user.content}} <i style="padding-left: 1%;" class="icon-remove"></i></div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                </accordion>
+                <button class="btn btn-outline-danger mt-2 bm-2  down"> Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="container">
+    <h2 class="footer">All Stores are dealt with !</h2>
+    <p>You are now ready to activate the retailer</p>
+</div>

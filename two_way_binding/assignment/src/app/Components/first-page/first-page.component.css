@@ -1,0 +1,71 @@
+a img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon {
+    color: blue;
+}
+
+.link {
+    margin: 17px;
+    margin-left: 8%;
+}
+
+.container {
+    width: 100%;
+}
+
+.save,
+.cancel:hover {
+    background-color: #ee007f;
+    color: #fff;
+}
+
+.cancel {
+    border: 1px solid #ee007f;
+    color: #ee007f;
+}
+
+form {
+    padding-right: 22%;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.upload img {
+    width: 40%;
+}
+
+.upload,
+.form {
+    margin-top: 50px;
+}
+
+.upload a {
+    color: #ee007f;
+    margin-right: 37%;
+    margin: 30px;
+}
+
+.btn {
+    margin-bottom: 30px;
+}
+
+.cancel {
+    margin-left: 20px;
+}
+
+.link a {
+    text-decoration: none;
+}
+
+input[type=file] {
+    position: absolute;
+    width: 135px;
+    opacity: 0;
+    left: 107px
+}

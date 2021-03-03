@@ -1,0 +1,70 @@
+<!-- back -->
+<div class="section">
+    <div class="back">
+        <i class="bi bi-arrow-left"></i>
+        <a class="back-link" href="history.go(-1)">Back to previous</a>
+    </div>
+    <div class="main-box my-2">
+        <div class="row">
+            <div class="col-md-4 text-center my-4">
+                <img src="assets/imgs/profile.jpg" alt="avatar" width="250" height="250" class="mx-5 my-3 profile"><br>
+                <a class="update" href=""><b>Update Photo</b></a>
+            </div>
+
+            <!-- form section -->
+            <div class="col-md-7 my-4 mx-4">
+                <h2 class="mt-3 mb-5"><b>Hi, Dave Lambert</b></h2>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="code" class="col-form-label">Code:</label>
+                        <input class='form-control' type='text' id='code' formControlName='code' [ngClass]="{'is-invalid':myForm.get('code').invalid && myForm.get('code').touched}">
+                        <div class='invalid-feedback' *ngIf="myForm.get('code').errors">
+                            <div *ngIf="myForm.get('code').errors.required">Please enter Code!!</div>
+                            <div *ngIf="myForm.get('code').errors.minlength"> Code must be of 4 digits.</div>
+                            <div *ngIf="myForm.get('code').errors.maxlength"> Code must not be greater than 4 digits
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName" class="col-form-label">First Name:</label>
+                        <input class='form-control' type='text' id='firstName' formControlName='firstName' [ngClass]="{'is-invalid':myForm.get('firstName').invalid && myForm.get('firstName').touched}" />
+                        <div class='invalid-feedback' *ngIf="myForm.get('firstName').errors">
+                            <div *ngIf="myForm.get('firstName').errors.required">Please enter FirstName!!</div>
+                            <div *ngIf="myForm.get('firstName').errors.minlength"> Name must be at least 3 characters long.
+                            </div>
+                            <div *ngIf="myForm.get('firstName').errors.cannotContainSpace">First Name can not contain spaces.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="for-group">
+                        <label for="lastName" class="col-form-label">Last Name:</label>
+                        <input class='form-control' type='text' id='lastName' formControlName='lastName'>
+
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input class='form-control' type='email' id='email' formControlName="email" [ngClass]="{'is-invalid':myForm.get('email').invalid && myForm.get('email').touched}" />
+                        <div class='invalid-feedback' *ngIf="myForm.get('email').errors">
+                            <div *ngIf="myForm.get('email').errors.email">Please enter valid email!!</div>
+                            <div *ngIf="myForm.get('email').errors.required">Please, enter valid email address.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile" class="col-form-label">Mobile Number:</label>
+                        <input class='form-control' type='tel' id='mobile' formControlName='mobile' [ngClass]="{'is-invalid':myForm.get('mobile').invalid && myForm.get('mobile').touched}" />
+                        <div class='invalid-feedback' *ngIf="myForm.get('mobile').errors">
+                            <div *ngIf="myForm.get('mobile').errors.required">Please enter Mobile Number!!</div>
+                            <div *ngIf="myForm.get('mobile').errors.minlength"> Mobile Number must be of 10 digits.
+                            </div>
+                            <div *ngIf="myForm.get('mobile').errors.maxlength"> Mobile must not be greater than 10 digits
+                            </div>
+                        </div>
+                    </div>
+                    <button type="subit" class="btn btn-pink mt-4 mr-1" [disabled]="!myForm.valid">Save</button>
+                    <button type="reset" class="btn btn-outline-pink mt-4">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

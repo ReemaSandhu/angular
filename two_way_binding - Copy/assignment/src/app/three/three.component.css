@@ -1,0 +1,166 @@
+/* removing arrow dropdown-icon */
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+
+/* removing css on clicking dd-btn */
+
+.dropdown-btn:focus {
+    box-shadow: none;
+}
+
+
+/* search and input formatting */
+
+.input-icon i {
+    position: absolute;
+}
+
+.icon {
+    padding: 12px 7px;
+    min-width: 50px;
+    text-align: center;
+}
+
+#search {
+    border: none;
+    color: rgb(129, 134, 141);
+    border-bottom: 1px solid rgb(162, 169, 176);
+    padding: 10px 15px 10px 40px;
+    font-size: 16px;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 7px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+
+/* OR in top-section-2 */
+
+.dot {
+    background-color: rgb(132, 191, 65);
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/* grey color */
+
+input[type=date],
+input[type=text],
+.text-grey {
+    color: rgb(162, 169, 176);
+}
+
+
+/* Icons - basket, suggestion, grid */
+
+.bi-grid-3x3-gap,
+.bi-cart3,
+.bi-journal-richtext,
+.bi-lightbulb {
+    color: rgb(2, 164, 218);
+    padding: 7px 11px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.bi-lightbulb {
+    color: rgb(132, 191, 65);
+}
+
+.line {
+    border-radius: 0;
+    border-bottom: 1px solid rgb(162, 169, 176);
+}
+
+
+/* three sections */
+
+.section1 {
+    box-shadow: 1px 1px 4px 1px rgb(228, 216, 216);
+    margin: 30px 10px 30px 35px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.section2-3 {
+    box-shadow: 1px 1px 4px 1px rgb(228, 216, 216);
+    margin: 30px 10px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    padding: 8px 20px;
+    background-color: transparent;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* date input */
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"] {
+    border: none;
+    padding-right: 0 !important;
+    padding-left: 0;
+}
+
+input[type="date"]:active,
+input[type="date"]:hover,
+input[type="date"]:focus {
+    outline: none;
+    padding-right: 0 !important;
+    padding-left: 0;
+}
+
+table tr:nth-child(odd) td:first-child {
+    border-left: 5px solid rgb(255, 0, 0);
+}
+
+table tr:nth-child(even) td:first-child {
+    border-left: 5px solid rgb(0, 128, 0);
+}
+
+
+/* three buttons */
+
+.qty {
+    width: fit-content;
+    height: fit-content;
+    border: 0.5px solid rgb(238, 0, 127);
+    border-radius: 5px;
+}
+
+.number {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(238, 0, 127);
+    color: white;
+    width: 30px;
+    height: 28px;
+    margin-top: 0;
+}

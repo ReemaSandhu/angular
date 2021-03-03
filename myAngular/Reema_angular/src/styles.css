@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.heading .card-header{
+    padding-bottom: 1px!important;
+    background-color: white;
+    border-left: none;
+}
+.shadow-lg {
+    box-shadow: 0 0rem 1rem rgba(0,0,0,.175)!important;
+}
+.heading p{
+margin-bottom: 7px!important;
+   
+}
